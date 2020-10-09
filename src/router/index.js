@@ -4,6 +4,9 @@ import Home from '../views/Home.vue'
 import Season from '../views/Season.vue'
 import Timer from '../views/Timer.vue'
 import WhosWatch from '../views/WhosWatch.vue'
+import UserDetails from '../views/UserDetails.vue'
+import UserEdit from '../views/UserEdit.vue'
+
 
 Vue.use(VueRouter)
 
@@ -27,6 +30,14 @@ const routes = [
     path: '/whoswatch',
     name: 'WhosWatch',
     component: WhosWatch
+  },
+  {
+    path: '/whoswatch/:userId',
+    component: UserDetails
+  },
+  {
+    path: '/edit/:userId?',
+    component: UserEdit
   }
 ]
 // *********************************** //

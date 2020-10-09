@@ -43,7 +43,7 @@ function save(userToSave) {
 
     } else {
         userToSave._id = _makeId()
-        userToSave.imgName = 'default'
+        userToSave.imgUrl = `https://api.adorable.io/avatars/120/${userToSave.name}.png`
         gUsers.push(userToSave)
     }
     storageService.saveToStorage(STORAGE_KEY, gUsers)
@@ -51,8 +51,7 @@ function save(userToSave) {
 }
 function getEmptyUser() {
     return Promise.resolve({
-        vendor: '',
-        speed: ''
+        name: '',
     })
 }
 function _loadUsers() {
